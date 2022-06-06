@@ -8,6 +8,7 @@ import {
 
 import Splash from './pages/Splash';
 import Signin from './pages/signin';
+import Signup from './pages/signup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
     <Route  path="/splash" element={<Splash/>} />
     <Route  path="/signin" element={<Signin/>} />
+    <Route  path="/signup" element={<Signup/>} />
 
     </Routes>
 

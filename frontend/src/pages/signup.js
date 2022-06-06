@@ -7,19 +7,24 @@ export default function signin() {
     <Page >
 
         <Container>
-            <Heading>Sign In To SAMS</Heading>
+            <Heading>Sign Up To SAMS</Heading>
 
             <PlaceHolder>Name</PlaceHolder>
+            <Input ></Input>
+
+            <PlaceHolder>Username</PlaceHolder>
             <Input ></Input>
 
             <PlaceHolder>Password</PlaceHolder>
             <Input ></Input>
 
-            <ForgetPassword>Forgot Password?</ForgetPassword>
+            <PlaceHolder>Confirm Password</PlaceHolder>
+            <Input ></Input>
+
 
             <Button >Sign In</Button>
 
-            <CreateAccount>Create New Account</CreateAccount>
+            <Already>Already have an Account?</Already>
         </Container>
 
         
@@ -41,12 +46,12 @@ background-color:#174A84;
 const Container = styled.div`
 
 
-margin-top:5rem;
+margin-top:3.5rem;
 width: 35%;
 margin-left: auto;
 margin-right:auto;
 display: block;
-  height: 450px;
+  height: 530px;
   border: none;
  
   background-color: #f5f5f5;
@@ -70,7 +75,7 @@ display: block;
 
 const PlaceHolder = styled.div`
   margin-left:6rem;
-  margin-top:2.5rem;
+  margin-top:1.75rem;
   text-align:start;
   color: #000000;
   font-weight: bold;
@@ -101,18 +106,6 @@ width: 55%;
   `;
 
 
-  const ForgetPassword= styled.div`
-  margin-left:6rem;
-  margin-top:0.5rem;
-  text-align:start;
-  color: #000000;
-  font-weight: normal;
-  font-size: 12px;
-
-
-
-`;
-
 const Button = styled.div`
 margin-top:2rem;
 text-align:center;
@@ -132,12 +125,12 @@ cursor: pointer;
 
 `;
 
-const CreateAccount= styled.div`
+const Already= styled.div`
  
-  margin-top:0.5rem;
+  margin-top:0.65rem;
   text-align:center;
   color: #000000;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 11px;
 
 `;
