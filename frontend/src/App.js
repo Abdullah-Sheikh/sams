@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import Splash from './pages/Splash';
+import Signin from './pages/signin';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Routes>
 
     <Route  path="/splash" element={<Splash/>} />
+    <Route  path="/signin" element={<Signin/>} />
 
     </Routes>
 
