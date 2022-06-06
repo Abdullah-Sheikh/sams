@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+
 
 export default function signin() {
   return (
@@ -22,9 +24,12 @@ export default function signin() {
             <Input ></Input>
 
 
-            <Button >Sign In</Button>
+            <Link to="/signin" >
+            <Button >Sign Up</Button>
+            </Link>
 
-            <Already>Already have an Account?</Already>
+
+            <Already><Link to="/signin" >Already have an Account? </Link></Already>
         </Container>
 
         

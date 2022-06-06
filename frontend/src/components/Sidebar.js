@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 import { ProSidebar, Menu, MenuItem, SubMenu ,SidebarHeader, SidebarFooter, SidebarContent} from 'react-pro-sidebar';
 
@@ -16,17 +17,19 @@ export default function Sidebar() {
    
   </SidebarHeader >
     <Menu iconShape="square">
-      <MenuItem > <ItemText>Societies </ItemText></MenuItem>
-      <MenuItem > <ItemText>Room Allotement </ItemText></MenuItem>
-      <MenuItem > <ItemText>Magazine </ItemText></MenuItem>
-      <MenuItem > <ItemText>Budget </ItemText></MenuItem>
-      <MenuItem > <ItemText>Events </ItemText></MenuItem>
-      <MenuItem > <ItemText>Announcements</ItemText></MenuItem>
+      <MenuItem > <ItemText>Societies <Link to="/socities" /></ItemText></MenuItem>
+      <MenuItem > <ItemText>Room Allotement <Link to="/allotments" /> </ItemText></MenuItem>
+      <MenuItem > <ItemText>Magazine <Link to="/magazine" /></ItemText></MenuItem>
+      <MenuItem > <ItemText>Budget <Link to="/budget" /></ItemText></MenuItem>
+      <MenuItem > <ItemText>Events <Link to="/events" /></ItemText></MenuItem>
+      <MenuItem > <ItemText>Announcements <Link to="/announcements" /></ItemText></MenuItem>
       
     </Menu>
 
     <SidebarFooter>
-    <Button>Sign Out</Button>
+    <Link to="/signin" >
+    <Button >Sign Out  </Button>
+    </Link>
   </SidebarFooter>
   </ProSidebar>
   )

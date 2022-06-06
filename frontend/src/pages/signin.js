@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+
 
 export default function signin() {
   return (
@@ -17,9 +19,11 @@ export default function signin() {
 
             <ForgetPassword>Forgot Password?</ForgetPassword>
 
+            <Link to="/socities" >
             <Button >Sign In</Button>
+            </Link>
 
-            <CreateAccount>Create New Account</CreateAccount>
+            <CreateAccount> <Link to="/signup" >Create New Account </Link></CreateAccount>
         </Container>
 
         
@@ -75,9 +79,6 @@ const PlaceHolder = styled.div`
   color: #000000;
   font-weight: bold;
   font-size: 12px;
-
-
-
 `;
 
 const Input = styled.input`

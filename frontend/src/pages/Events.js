@@ -20,11 +20,11 @@ function createData(name, calories, fat, carbs, protein) {
   }
   
   const rows = [
-    createData('FPS', 5, "22/02/2022 12:00 AM", "18F-XXXX", "18F-XXXX"),
+    createData('XXXXXX', "FPS", "22/02/2022 12:00 AM", "Seminar Hall", "Approved"),
     
   ];
 
-export default function RoomAllotments() {
+export default function Events() {
   return (
       <>
 
@@ -41,10 +41,9 @@ export default function RoomAllotments() {
       <Grid container spacing={2}>
         <Grid item xs={8}>
 
-            <RowContainer>
-            <Heading>Room Allotment  </Heading>
-            <Button>Download Report</Button>
-            </RowContainer>
+           
+            <Heading>Events</Heading>
+           
 
             <ContainerTable>
 
@@ -52,11 +51,12 @@ export default function RoomAllotments() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Society Name</TableCell>
-            <TableCell align="center">Room Number</TableCell>
+          <TableCell align="center">Event</TableCell>
+            <TableCell align="center">Society </TableCell>
+            
             <TableCell align="center">Date/Time</TableCell>
-            <TableCell align="center">Alloted To</TableCell>
-            <TableCell align="center">Roll Number</TableCell>
+            <TableCell align="center">Venue</TableCell>
+            <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -83,28 +83,20 @@ export default function RoomAllotments() {
          
         </Grid>
         <Grid item xs={4}>
-
         <ReminderContainer>
            
-           <TextInput>  Select Society</TextInput>
            <TextInput>Date</TextInput>
            <TextInput>Time</TextInput>
-           <TextInput>Alloted to</TextInput>
-           <TextInput>Purpose</TextInput>
-
-           
-
-           <Reminders>Available Rooms</Reminders>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           
+           <TextInput>Venue</TextInput>
+           <TextInput>Society</TextInput>
+           <TextInput>Budget</TextInput>
+           <TextInput>Attachment</TextInput>
+           <TextInput>Description</TextInput>
            
 
                <RowContainer>
        
-           <NewButton>Allot Room</NewButton>
+           <NewButton>New Event</NewButton>
            
            </RowContainer>
 
@@ -172,31 +164,36 @@ display: block;
   `;
 
 
-  const Button = styled.div`
-
-text-align:center;
-font-size: 11px;
-margin-top:2rem;
-margin-left:2rem;
-border-radius: 5px;
-width:20%;
-background-color: #174A84; 
-border: none; 
-color: white; /* White text */
-padding: 12px 16px; 
-cursor: pointer; 
 
 
-`;
+const ReminderContainer = styled.div`
+
+
+margin-top:6.5rem;
+width: 90%;
+margin-left: auto;
+margin-right:auto;
+display: block;
+  height: 495px;
+  border: solid #A5C9FF;
+  box-shadow: -5px -4px 9px -15px #A5C9FF;
+  background-color: #ffffff;
+  border-radius: 6px;
+  
+  font-size: 16px; 
+  
+  `;
+
+ 
 
 
 const NewButton = styled.div`
 
 text-align:center;
-align:center;
+align:right;
 font-size: 11px;
-margin-top:2rem;
-margin-left:5rem;
+margin-top:7rem;
+margin-left:10rem;
 margin-right:1rem;
 border-radius: 5px;
 width:40%;
@@ -213,7 +210,7 @@ cursor: pointer;
 const TextInput= styled.div`
  
 text-align:start;
-font-size: 10px;
+font-size: 12px;
 margin-top:0.5rem;
 margin-right:0.5rem;
 margin-left:0.5rem;
@@ -226,34 +223,8 @@ color: #174A84; /* White text */
 padding: 12px 16px; 
 cursor: pointer; 
 `;
-const ReminderContainer = styled.div`
 
 
-margin-top:6.5rem;
-width: 90%;
-margin-left: auto;
-margin-right:auto;
-display: block;
-  height: 510px;
-  border: solid #A5C9FF;
-  box-shadow: -5px -4px 9px -15px #A5C9FF;
-  background-color: #ffffff;
-  border-radius: 6px;
-  
-  font-size: 16px; 
-  
-  `;
-
-  const Reminders= styled.div`
- 
-  margin-top:1rem;
-  text-align:start;
-  margin-left:1rem;
-  color: #174A84;
-  font-weight: 700;
-  font-size: 10px;
-
-`;
 
 
 

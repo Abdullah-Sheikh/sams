@@ -20,11 +20,11 @@ function createData(name, calories, fat, carbs, protein) {
   }
   
   const rows = [
-    createData('FPS', 5, "22/02/2022 12:00 AM", "18F-XXXX", "18F-XXXX"),
+    createData('FPS', "PKR 8,5034", "22/02/2022 12:00 AM", "V3422R2", "Approved"),
     
   ];
 
-export default function RoomAllotments() {
+export default function Budget() {
   return (
       <>
 
@@ -36,14 +36,16 @@ export default function RoomAllotments() {
     <div className="split1 right">
 
         <Header/>
+        
 
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={8}>
 
             <RowContainer>
-            <Heading>Room Allotment  </Heading>
-            <Button>Download Report</Button>
+            <Heading>Budget</Heading>
+            <Button>Budget Requests</Button>
+            <OutlineButton>New Request</OutlineButton>
             </RowContainer>
 
             <ContainerTable>
@@ -52,11 +54,11 @@ export default function RoomAllotments() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Society Name</TableCell>
-            <TableCell align="center">Room Number</TableCell>
+            <TableCell align="center">Name</TableCell>
+            <TableCell align="center">Budget</TableCell>
             <TableCell align="center">Date/Time</TableCell>
-            <TableCell align="center">Alloted To</TableCell>
-            <TableCell align="center">Roll Number</TableCell>
+            <TableCell align="center">Innovice</TableCell>
+            <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -83,34 +85,43 @@ export default function RoomAllotments() {
          
         </Grid>
         <Grid item xs={4}>
+            <DetailsContainer >
+            <RowContainer>
+                <TextLeft>Total</TextLeft>
+                <TextRight>15</TextRight>
+            </RowContainer>  
+            <RowContainer>
+                <TextLeft>Approved</TextLeft>
+                <TextRight>10</TextRight>
+            </RowContainer>   
+            <RowContainer>
+                <TextLeft>Pending</TextLeft>
+                <TextRight>05</TextRight>
+            </RowContainer> 
+            <RowContainer>
+                <TextLeft>Allocated Budget</TextLeft>
+                <TextRight> 60,000/-</TextRight>
+            </RowContainer> 
+            <RowContainer>
+                <TextLeft>Remaining Budget</TextLeft>
+                <TextRight>40,000/-</TextRight>
+            </RowContainer>    
+            </DetailsContainer>
 
-        <ReminderContainer>
-           
-           <TextInput>  Select Society</TextInput>
-           <TextInput>Date</TextInput>
-           <TextInput>Time</TextInput>
-           <TextInput>Alloted to</TextInput>
-           <TextInput>Purpose</TextInput>
 
-           
+            <ReminderContainer>
+                <Reminders>Important Reminders</Reminders>
 
-           <Reminders>Available Rooms</Reminders>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           <TextInput>Room Number XX</TextInput>
-           
-           
+                <RowContainer>
+        
+            <NewButton>New</NewButton>
+            <UpdateOutlineButton>Update</UpdateOutlineButton>
+            </RowContainer>
 
-               <RowContainer>
-       
-           <NewButton>Allot Room</NewButton>
-           
-           </RowContainer>
+            </ReminderContainer>
 
-           
 
-           </ReminderContainer>
+
          
         </Grid>
        
@@ -141,6 +152,13 @@ display: flex;
 `;
 
 
+const Page = styled.div`
+width: 100%;
+height: 100vh;
+overflow: auto;
+background-color:#FAFDFF;
+
+  `;
 const Heading = styled.div`
 
  margin-top:2rem;
@@ -190,13 +208,103 @@ cursor: pointer;
 `;
 
 
+const OutlineButton = styled.div`
+
+text-align:center;
+font-size: 12px;
+margin-top:2rem;
+margin-left:2rem;
+border-radius: 5px;
+width:20%;
+font-weight:700;
+background-color: #ffffff; 
+border: solid #174A84; 
+color: #174A84; /* White text */
+padding: 12px 16px; 
+cursor: pointer; 
+
+`;
+
+
+const DetailsContainer = styled.div`
+
+
+margin-top:6.75rem;
+width: 90%;
+margin-left: auto;
+margin-right:auto;
+display: block;
+  height: 200px;
+  border: solid #A5C9FF;
+  box-shadow: -5px -4px 9px -15px #A5C9FF;
+  background-color: #ffffff;
+  border-radius: 6px;
+  
+  font-size: 16px; 
+  
+  `;
+
+
+  const TextLeft = styled.div`
+  margin-left:1rem;
+  width:100%;
+  margin-top:1.5rem;
+  text-align:start;
+  color: #174A84;
+  font-weight: bold;
+  font-size: 10px;
+
+`;
+
+const TextRight = styled.div`
+
+  margin-right:1rem;
+  margin-top:1.5rem;
+  text-align:right;
+  
+  
+  color: #174A84;
+  font-weight: bold;
+  font-size: 10px;
+
+`;
+
+
+const ReminderContainer = styled.div`
+
+
+margin-top:1.75rem;
+width: 90%;
+margin-left: auto;
+margin-right:auto;
+display: block;
+  height: 255px;
+  border: solid #A5C9FF;
+  box-shadow: -5px -4px 9px -15px #A5C9FF;
+  background-color: #ffffff;
+  border-radius: 6px;
+  
+  font-size: 16px; 
+  
+  `;
+
+  const Reminders= styled.div`
+ 
+  margin-top:1rem;
+  text-align:center;
+  color: #174A84;
+  font-weight: 700;
+  font-size: 12px;
+
+`;
+
+
 const NewButton = styled.div`
 
 text-align:center;
-align:center;
 font-size: 11px;
-margin-top:2rem;
-margin-left:5rem;
+margin-top:10rem;
+margin-left:1rem;
 margin-right:1rem;
 border-radius: 5px;
 width:40%;
@@ -210,50 +318,23 @@ cursor: pointer;
 `;
 
 
-const TextInput= styled.div`
- 
-text-align:start;
-font-size: 10px;
-margin-top:0.5rem;
-margin-right:0.5rem;
-margin-left:0.5rem;
+const UpdateOutlineButton = styled.div`
 
-width:85%;
-font-weight:500;
+text-align:center;
+font-size: 12px;
+margin-top:10rem;
+margin-right:1rem;
+border-radius: 5px;
+width:40%;
+font-weight:700;
 background-color: #ffffff; 
-border-bottom: solid #A5C9FF; 
+border: solid #174A84; 
 color: #174A84; /* White text */
 padding: 12px 16px; 
 cursor: pointer; 
-`;
-const ReminderContainer = styled.div`
-
-
-margin-top:6.5rem;
-width: 90%;
-margin-left: auto;
-margin-right:auto;
-display: block;
-  height: 510px;
-  border: solid #A5C9FF;
-  box-shadow: -5px -4px 9px -15px #A5C9FF;
-  background-color: #ffffff;
-  border-radius: 6px;
-  
-  font-size: 16px; 
-  
-  `;
-
-  const Reminders= styled.div`
- 
-  margin-top:1rem;
-  text-align:start;
-  margin-left:1rem;
-  color: #174A84;
-  font-weight: 700;
-  font-size: 10px;
 
 `;
+
 
 
 

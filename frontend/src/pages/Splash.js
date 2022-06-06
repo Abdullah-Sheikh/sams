@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from "../assets/logo.jpeg";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
+
 
 
 export default function Splash() {
@@ -12,7 +14,10 @@ export default function Splash() {
 
         <h3>Student Affair Management System</h3>
 
+
+        <Link to="/signin" >
         <Button ><i class="fa fa-arrow-right"></i></Button>
+        </Link>
 
 
       </LogoWrapper>
