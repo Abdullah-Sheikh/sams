@@ -1,6 +1,14 @@
-# sams
+# SMAS 🖥
 
 
+Student Affair Management System using Reactjs. 
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/Abdullah_shk_.svg?style=social)](https://twitter.com/Abdullah_shk_)
+
+
+
+
+## 📸 ScreenShots
 
 ![Picture 1](https://user-images.githubusercontent.com/62107887/175518579-9330387f-a311-4533-829f-2d1ab009bf96.png)
 
@@ -13,3 +21,22 @@
 ![Picture 8](https://user-images.githubusercontent.com/62107887/175518618-23c0bb9e-5320-4420-8359-d78ceff6e277.png)
 
 ![Picture 9](https://user-images.githubusercontent.com/62107887/175518623-946f89e8-ce09-4042-b7a8-87501c759a7c.png)
+
+
+<br> Please star ⭐ the repo if you like what you see 😉.
+
+## 💻 Requirements
+
+- Any Operating System (ie. MacOS X, Windows)
+- Visual Code IDE
+- A little knowledge of Javascript, Material UI and Reactjs.
+
+
+## 🤓 Author(s)
+
+**Abdullah Sheikh**
+[![Twitter Follow](https://img.shields.io/twitter/follow/Abdullah_shk_.svg?style=social)](https://twitter.com/Abdullah_shk_)
+
+## 🔖 LICENCE
+
+[MIT](https://github.com/Abdullah-Sheikh/sams/blob/master/licence)
